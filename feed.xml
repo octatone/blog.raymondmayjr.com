@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raymond May, Jr.</title>
+    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://localhost:8080</link>
+    <description>This, that, and other stuff</description>
+    <pubDate>Mon, 16 Dec 2013 15:00:00 +0100</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>First Post!</title>
+      <link>http://localhost:8080/articles/first-post/</link>
+      <pubDate>Mon, 16 Dec 2013 15:00:00 +0100</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/first-post/</guid>
+      <author></author>
+      <description>&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
+
+  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; greeting = &lt;span class=&quot;string&quot;&gt;'Hello world.'&lt;/span&gt;;
+  alert(greeting);
+})()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
