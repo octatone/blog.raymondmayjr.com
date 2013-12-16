@@ -11,18 +11,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: url('http://raymondmayjr.com/images/timetodance.png') no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.02;
-}
-
 .content-wrap {
   width: 900px;
   margin: 0 auto;
