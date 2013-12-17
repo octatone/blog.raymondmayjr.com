@@ -10,9 +10,7 @@ Adding user comments to a default Wintersmith blog is super simple using disqus 
 
 <span class="more"></span>
 
-First register with [disqus.com](http://disqus.com) and add your wintersmith blog.  This will give you a unique disqus id for your blog.
-
-Then create a jade mixin for disqus' javascript snippet.  You can copy and paste my code here, just remember to change `your-disqus-forum-id` to your unique disqus forum id.
+First register with [disqus.com](http://disqus.com) and add your wintersmith blog as a "site".  This will give you a unique disqus ID for your blog.
 
 `templates/disqus.jade`
 ```jade
@@ -35,7 +33,7 @@ mixin disqus()
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 ```
 
-Next include your newly created disqus jade snippet in your article template.  I have included my disqus comments between the navigation and the about block.  As you can see below, I am using a conditional block in order to easily enable and disable comments on a per-article basis.
+Create a jade mixin for disqus' javascript snippet.  You can copy and paste my code from above, just remember to change `your-disqus-forum-id` to your unique disqus forum ID.
 
 `templates/article.jade`
 ```jade
@@ -49,7 +47,7 @@ block prepend footer
     mixin disqus()
 ```
 
-Now you can enable comments for any blog articles by simply adding `comments: true` to an article's meta data.
+Include your newly created disqus jade snippet in your article template.  I have included my disqus comments between the navigation and the about block.  As you can see above, I am using a conditional block in order to easily enable and disable comments on a per-article basis.
 
 `contents/articles/your-article/index.md`
 ```
@@ -61,3 +59,5 @@ template: article.jade
 comments: true
 ---
 ```
+
+You now have the ability to enable comments for any blog articles by simply adding `comments: true` to an article's meta data.

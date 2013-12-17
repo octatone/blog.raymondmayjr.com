@@ -190,6 +190,7 @@ footer .copy, footer .copy a {
 }
 
 .article header .date {
+  margin: 1em 0;
   text-align: center;
   font-size: 0.8em;
 }
