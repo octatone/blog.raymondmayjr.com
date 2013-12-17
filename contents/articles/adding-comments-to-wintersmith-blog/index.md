@@ -10,7 +10,7 @@ Adding user comments to a default Wintersmith blog is super simple using disqus 
 
 <span class="more"></span>
 
-First register with [disqus.com](http://disqus.com) and add your wintersmith blog as a "site".  This will give you a unique disqus ID for your blog.
+First register with [disqus.com](http://disqus.com) and add your wintersmith blog as a "site".  This will provide you with a unique disqus ID for your blog.
 
 `templates/disqus.jade`
 ```jade

@@ -120,7 +120,7 @@ body.article-detail > header h1 {
 }
 
 body.article-detail > header {
-  margin-bottom: 3em;
+  margin: 3em 0;
 }
 
 /* page footer */
