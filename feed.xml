@@ -16,7 +16,7 @@
       <author></author>
       <description>&lt;p&gt;Adding user comments to a default Wintersmith blog is super simple using disqus and jade templates.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;First register with &lt;a href=&quot;http://disqus.com/&quot;&gt;disqus.com&lt;/a&gt; and add your wintersmith blog as a “site”.  This will give you a unique disqus ID for your blog.&lt;/p&gt;
+&lt;p&gt;First register with &lt;a href=&quot;http://disqus.com/&quot;&gt;disqus.com&lt;/a&gt; and add your wintersmith blog as a “site”.  This will provide you with a unique disqus ID for your blog.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;templates/disqus.jade&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-jade&quot;&gt;mixin disqus()
   div#disqus_thread
