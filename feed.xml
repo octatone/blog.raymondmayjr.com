@@ -16,8 +16,7 @@
       <author></author>
       <description>&lt;p&gt;Adding user comments to a default Wintersmith blog is super simple using disqus and jade templates.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;First register with &lt;a href=&quot;http://disqus.com/&quot;&gt;disqus.com&lt;/a&gt; and add your wintersmith blog.  This will give you a unique disqus id for your blog.&lt;/p&gt;
-&lt;p&gt;Then create a jade mixin for disqus’ javascript snippet.  You can copy and paste my code here, just remember to change &lt;code&gt;your-disqus-forum-id&lt;/code&gt; to your unique disqus forum id.&lt;/p&gt;
+&lt;p&gt;First register with &lt;a href=&quot;http://disqus.com/&quot;&gt;disqus.com&lt;/a&gt; and add your wintersmith blog as a “site”.  This will give you a unique disqus ID for your blog.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;templates/disqus.jade&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-jade&quot;&gt;mixin disqus()
   div#disqus_thread
@@ -36,7 +35,7 @@
   noscript.
     Please enable JavaScript to view the &amp;lt;a href=&amp;quot;http://disqus.com/?ref_noscript&amp;quot;&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
     &amp;lt;a href=&amp;quot;http://disqus.com&amp;quot; class=&amp;quot;dsq-brlink&amp;quot;&amp;gt;comments powered by &amp;lt;span class=&amp;quot;logo-disqus&amp;quot;&amp;gt;Disqus&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next include your newly created disqus jade snippet in your article template.  I have included my disqus comments between the navigation and the about block.  As you can see below, I am using a conditional block in order to easily enable and disable comments on a per-article basis.&lt;/p&gt;
+&lt;p&gt;Create a jade mixin for disqus’ javascript snippet.  You can copy and paste my code from above, just remember to change &lt;code&gt;your-disqus-forum-id&lt;/code&gt; to your unique disqus forum ID.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;templates/article.jade&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-jade&quot;&gt;block prepend footer
   include disqus
@@ -46,7 +45,7 @@
 
   if page.metadata.comments
     mixin disqus()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now you can enable comments for any blog articles by simply adding &lt;code&gt;comments: true&lt;/code&gt; to an article’s meta data.&lt;/p&gt;
+&lt;p&gt;Include your newly created disqus jade snippet in your article template.  I have included my disqus comments between the navigation and the about block.  As you can see above, I am using a conditional block in order to easily enable and disable comments on a per-article basis.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;contents/articles/your-article/index.md&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;---
 title: Some Article
@@ -55,6 +54,7 @@ date: 2013-12-16 15:00
 template: article.jade
 comments: true
 ---&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You now have the ability to enable comments for any blog articles by simply adding &lt;code&gt;comments: true&lt;/code&gt; to an article’s meta data.&lt;/p&gt;
 </description>
     </item>
     <item>
