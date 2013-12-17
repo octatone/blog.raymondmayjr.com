@@ -3,7 +3,10 @@ title: First Post!
 author: me
 date: 2013-12-16 15:00
 template: article.jade
+comments: false
 ---
+
+<span class="more"></span>
 
 ```javascript
 (function () {
@@ -13,4 +16,10 @@ template: article.jade
 })()
 ```
 
-<span class="more"></span>
+<script>
+(function () {
+
+  var greeting = 'Hello world.';
+  alert(greeting);
+})()
+</script>
