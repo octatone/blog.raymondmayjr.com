@@ -21,37 +21,25 @@
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><pre><code class="lang-javascript">(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+          <section class="content"><p><span class="more"></span></p>
+<pre><code class="lang-javascript">(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
 
   <span class="keyword">var</span> greeting = <span class="string">'Hello world.'</span>;
   alert(greeting);
 })()</code></pre>
-<p><span class="more"></span></p>
-</section>
+<script>
+(function () {
+
+  var greeting = 'Hello world.';
+  alert(greeting);
+})()
+</script></section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script>
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = 'blog-raymondmayjr'; // required: replace example with your forum shortname
-          
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>
-          Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-          
-          
-        </noscript>
+        <div class="nav"><a href="/">« Full Blog</a></div>
         <section class="about"><p>I am a front end engineer working and enjoying life in Berlin.</p>
 <p>Whether it manifests in the browser, on the server, in a CLI, or in embedded systems, I take Javascript very seriously; every JS devloper should have benchmark js in their tool belt.</p>
 <p>Experimenting with build tools, frameworks, and new ECMA pipeline features are how I spend my free time.  Web audio, synthesis, canvas, and other multimedia are all areas I enjoy exploring.</p>

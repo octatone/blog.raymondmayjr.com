@@ -33,8 +33,7 @@ pre {
   font-size: 0.9em;
   overflow: auto;
   background: #fff;
-  border: 1px dashed #d2d2d2;
-  border-radius: 0.25em;
+  border: 1px solid #d2d2d2;
   margin-bottom: 1.8em;
   padding: 1em;
 }
@@ -76,7 +75,7 @@ blockquote {
 
 hr {
   border: 0;
-  border-top: 1px dashed #d2d2d2;
+  border-top: 1px solid #d2d2d2;
   height: 0;
   margin: 1.6em 0;
 }
@@ -143,9 +142,10 @@ footer .nav a {
 }
 
 footer .about {
-  border-top: 1px dashed #d2d2d2;
+  border-top: 1px solid #d2d2d2;
   padding: 2.2em 3em;
-  font-size: 0.7em;
+  font-size: 0.75em;
+  line-height: 1.75em;
   -webkit-column-count: 3;
   -moz-column-count: 3;
   -ms-column-count: 3;
@@ -174,7 +174,7 @@ footer .copy, footer .copy a {
 }
 
 .article header {
-  border-top: 1px dashed #d2d2d2;
+  border-top: 1px solid #d2d2d2;
 }
 
 .article header h2 {
@@ -386,7 +386,6 @@ pre code {
   .header h1 {
   }
   .header .description {
-    font-size: 1em;
   }
   .article {
     margin: 1em 0 2.5em;
@@ -409,7 +408,6 @@ pre code {
   }
   footer .about {
     padding: 0;
-    font-size: 0.9em;
     padding-top: 1.6em;
     -webkit-column-count: 1;
     -moz-column-count: 1;

@@ -5,22 +5,77 @@
     <atom:link href="http://blog.raymondmayjr.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://blog.raymondmayjr.com</link>
     <description>This, that, and other stuff</description>
-    <pubDate>Mon, 16 Dec 2013 15:00:00 +0100</pubDate>
+    <pubDate>Tue, 17 Dec 2013 15:00:00 +0100</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Adding Comments to a Wintersmith Blog</title>
+      <link>http://blog.raymondmayjr.com/articles/adding-comments-to-wintersmith-blog/</link>
+      <pubDate>Tue, 17 Dec 2013 15:00:00 +0100</pubDate>
+      <guid isPermaLink="true">http://blog.raymondmayjr.com/articles/adding-comments-to-wintersmith-blog/</guid>
+      <author></author>
+      <description>&lt;p&gt;Adding user comments to a default Wintersmith blog is super simple using disqus and jade templates.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;First register with &lt;a href=&quot;http://disqus.com/&quot;&gt;disqus.com&lt;/a&gt; and add your wintersmith blog.  This will give you a unique disqus id for your blog.&lt;/p&gt;
+&lt;p&gt;Then create a jade mixin for disqus’ javascript snippet.  You can copy and paste my code here, just remember to change &lt;code&gt;your-disqus-forum-id&lt;/code&gt; to your unique disqus forum id.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;templates/disqus.jade&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-jade&quot;&gt;mixin disqus()
+  div#disqus_thread
+
+  script.
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = &amp;#39;your-disqus-forum-id&amp;#39;; // required: replace example with your forum shortname
+
+    /* * * DON&amp;#39;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&amp;#39;script&amp;#39;); dsq.type = &amp;#39;text/javascript&amp;#39;; dsq.async = true;
+        dsq.src = &amp;#39;//&amp;#39; + disqus_shortname + &amp;#39;.disqus.com/embed.js&amp;#39;;
+        (document.getElementsByTagName(&amp;#39;head&amp;#39;)[0] || document.getElementsByTagName(&amp;#39;body&amp;#39;)[0]).appendChild(dsq);
+    })();
+
+  noscript.
+    Please enable JavaScript to view the &amp;lt;a href=&amp;quot;http://disqus.com/?ref_noscript&amp;quot;&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+    &amp;lt;a href=&amp;quot;http://disqus.com&amp;quot; class=&amp;quot;dsq-brlink&amp;quot;&amp;gt;comments powered by &amp;lt;span class=&amp;quot;logo-disqus&amp;quot;&amp;gt;Disqus&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next include your newly created disqus jade snippet in your article template.  I have included my disqus comments between the navigation and the about block.  As you can see below, I am using a conditional block in order to easily enable and disable comments on a per-article basis.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;templates/article.jade&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-jade&quot;&gt;block prepend footer
+  include disqus
+
+  div.nav
+    a(href=contents.index.url) « Full Blog
+
+  if page.metadata.comments
+    mixin disqus()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now you can enable comments for any blog articles by simply adding &lt;code&gt;comments: true&lt;/code&gt; to an article’s meta data.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;contents/articles/your-article/index.md&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: Some Article
+author: me
+date: 2013-12-16 15:00
+template: article.jade
+comments: true
+---&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     <item>
       <title>First Post!</title>
       <link>http://blog.raymondmayjr.com/articles/first-post/</link>
       <pubDate>Mon, 16 Dec 2013 15:00:00 +0100</pubDate>
       <guid isPermaLink="true">http://blog.raymondmayjr.com/articles/first-post/</guid>
       <author></author>
-      <description>&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
+      <description>&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
 
   &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; greeting = &lt;span class=&quot;string&quot;&gt;'Hello world.'&lt;/span&gt;;
   alert(greeting);
 })()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-</description>
+&lt;script&gt;
+(function () {
+
+  var greeting = 'Hello world.';
+  alert(greeting);
+})()
+&lt;/script&gt;</description>
     </item>
   </channel>
 </rss>
