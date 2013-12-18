@@ -1,7 +1,6 @@
 extends layout
 
 block content
-  include author
   each article in articles
     article.article.intro
       header
@@ -12,17 +11,13 @@ block content
       section.content
         !{ typogr(article.intro).typogrify() }
         if article.hasMore
-          p.more
-            a(href=article.url) ...
+          a.more(href=article.url) more ...
 
 block prepend footer
   div.nav
     if prevPage
       a(href=prevPage.url) « Newer
     else
-      a(href='/archive.html') « Archives
+      a(href='/archive.html') Archives
     if nextPage
-      a(href=nextPage.url) Next page »
-
-
-
+      a(href=nextPage.url) Older »

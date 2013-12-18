@@ -33,7 +33,7 @@ mixin disqus()
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 ```
 
-Create a jade mixin for disqus' javascript snippet.  You can copy and paste my code from above, just remember to change `your-disqus-forum-id` to your unique disqus forum ID.
+Create a jade mixin for the disqus' javascript snippet.  You can copy and paste my code from above, just remember to change `your-disqus-forum-id` to your unique disqus forum ID.
 
 `templates/article.jade`
 ```jade
